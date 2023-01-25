@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author kanmo
+ *
+ */
+module bytebank {
+}
