@@ -6,9 +6,12 @@ public class Account {
 	private int agency;
 	private int number;
 	private Client client;
+	private static int total;
 	
 	
 	public Account(int agency, int number, Client client) {
+		Account.total++;
+		System.out.println("The total of created accounts is " + Account.total);
 		this.agency = agency;
 		this.number = number;
 		this.setClient(client);
