@@ -53,4 +53,12 @@ public class Account {
 	public void setAgency(int agency) {
 		this.agency = agency;
 	}
+	
+	public void setClient(Client client) {
+		this.client = client;
+	}
+	
+	public Client getClient() {
+		return client;
+	}
 }

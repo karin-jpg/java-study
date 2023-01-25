@@ -12,12 +12,20 @@ public class CreateAccount {
 		account.setNumber(777);				
 		account.deposit(100);
 		
-		System.out.println("Your account number is "+ String.format(Locale.GERMAN, "%,.2f", account.getNumber()));
+		Client client = new Client();
+				
+		client.setName("Karn Morais");
+		client.setCpf("265.458.456-06");
+		client.setProfession("Developer");
+		
+		account.setClient(client);
+		
+		System.out.println("Your account number is "+ account.getNumber());
 		System.out.println("Your account balance is "+ String.format(Locale.GERMAN, "%,.2f", account.getBalance()));
 		System.out.println();
 		account.withdraw(25.65);
 
-		System.out.println("Your account number is "+ String.format(Locale.GERMAN, "%,.2f", account.getNumber()));
+		System.out.println("Your account number is "+ account.getNumber());
 		System.out.println("Your new balance is "+ String.format(Locale.GERMAN, "%,.2f", account.getBalance()));
 		System.out.println();
 		
