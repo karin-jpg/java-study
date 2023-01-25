@@ -9,6 +9,10 @@ public class Account {
 	
 	
 	public void deposit(double value) {
+		if (value < 0) {
+			System.out.println("Negative values are not permitted!");
+			return;
+		}
 		this.balance += value;
 	}
 	
@@ -43,6 +47,10 @@ public class Account {
 	}
 	
 	public void setNumber(int number) {
+		if (number < 1) {
+			System.out.println("Negative values are not permitted!");
+			return;
+		}
 		this.number = number;
 	}
 	
@@ -51,6 +59,10 @@ public class Account {
 	}
 	
 	public void setAgency(int agency) {
+		if (agency < 1) {
+			System.out.println("Negative values are not permitted!");
+			return;
+		}
 		this.agency = agency;
 	}
 	
