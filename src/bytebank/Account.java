@@ -8,6 +8,14 @@ public class Account {
 	private Client client;
 	
 	
+	public Account(int agency, int number, Client client) {
+		this.setAgency(agency);
+		this.setNumber(number);
+		this.setClient(client);
+		
+		System.out.println("Account created!");
+	}
+	
 	public void deposit(double value) {
 		if (value < 0) {
 			System.out.println("Negative values are not permitted!");

@@ -6,17 +6,15 @@ public class CreateAccount {
 
 	public static void main(String[] args) {		
 		
-		Account account = new Account();
-		
-		account.setAgency(123);
-		account.setNumber(777);				
-		account.deposit(100);
-		
 		Client client = new Client();
-				
+		
 		client.setName("Karin Morais");
 		client.setCpf("265.458.456-06");
 		client.setProfession("Developer");
+		
+		Account account = new Account(123, 777, client);
+		
+		account.deposit(100);
 		
 		account.setClient(client);
 		
@@ -35,7 +33,12 @@ public class CreateAccount {
 		System.out.println("Your new balance is "+ String.format(Locale.GERMAN, "%,.2f", account.getBalance()));
 		System.out.println();
 		
-		Account otherAccount = new Account();
+		Client otherClient = new Client();
+		client.setName("Jonathan");
+		client.setCpf("265.987.321-06");
+		client.setProfession("Developer");
+		
+		Account otherAccount = new Account(321, 666, otherClient);
 		otherAccount.deposit(20);
 		
 		boolean successTransfer = account.transfer(1000, otherAccount);
