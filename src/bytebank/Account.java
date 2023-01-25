@@ -9,8 +9,8 @@ public class Account {
 	
 	
 	public Account(int agency, int number, Client client) {
-		this.setAgency(agency);
-		this.setNumber(number);
+		this.agency = agency;
+		this.number = number;
 		this.setClient(client);
 		
 		System.out.println("Account created!");
@@ -53,25 +53,9 @@ public class Account {
 	public int getNumber() {
 		return this.number;
 	}
-	
-	public void setNumber(int number) {
-		if (number < 1) {
-			System.out.println("Negative values are not permitted!");
-			return;
-		}
-		this.number = number;
-	}
-	
+
 	public int getAgency() {
 		return this.agency;
-	}
-	
-	public void setAgency(int agency) {
-		if (agency < 1) {
-			System.out.println("Negative values are not permitted!");
-			return;
-		}
-		this.agency = agency;
 	}
 	
 	public void setClient(Client client) {
