@@ -52,5 +52,7 @@ public class CreateAccount {
 		
 		System.out.println("Your new balance is "+ String.format(Locale.GERMAN, "%,.2f", account.getBalance()));
 		
+		System.out.println("The total of created accounts until now is " + Account.getTotal());
+		
 	}
 }

@@ -68,4 +68,8 @@ public class Account {
 	public Client getClient() {
 		return client;
 	}
+	
+	public static int getTotal() {
+		return Account.total;
+	}
 }
